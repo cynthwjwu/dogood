@@ -14,12 +14,15 @@ import java.io.IOException;
  */
 public class EventServlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-
+        String name = req.getParameter("name");
         String date = req.getParameter("date");
-        String city = req.getParameter("city");
+        String time = req.getParameter("time");
+        String location = req.getParameter("location");
+        String contactName = req.getParameter("contactName");
+        String contactEmail = req.getParameter("contactEmail");
+        String description = req.getParameter("description");
 
-
-        RequestDispatcher rd = req.getRequestDispatcher("/events.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/confirmsubmission.jsp");
         try {
             rd.forward(req, resp);
         } catch (ServletException se) {}

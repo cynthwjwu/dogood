@@ -25,13 +25,10 @@
     <%
         }
     %>
-    <form action = "/events" method = "post">
-        <p>Date</p>
-        <div><textarea name="date" rows="1" cols="20"></textarea></div>
-        <p>City</p>
-        <div><textarea name="city" rows="1" cols="20"></textarea></div>
-        <br>
-        <div><input type="submit" value="Do Good" class="button"/></div>
-    </form>
+
+    <a href="/volunteer">Volunteer</a>
+    <br>
+    <a href="/organizer">Organizer</a>
+
 </body>
 </html>
