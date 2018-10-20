@@ -7,22 +7,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class HomeServlet extends HttpServlet {
-    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException{
-        doPost(req, resp);
-    }
-
+/**
+ * This class should take in date and city from form
+ * Then search through database for events that match
+ * Then a list of those results to events.jsp to display
+ */
+public class EventServlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
         String date = req.getParameter("date");
         String city = req.getParameter("city");
 
-        //redirect to same jsp page
-        RequestDispatcher rd = req.getRequestDispatcher("/home.jsp");
+
+        RequestDispatcher rd = req.getRequestDispatcher("/events.jsp");
         try {
             rd.forward(req, resp);
         } catch (ServletException se) {}
-
-        //resp.sendRedirect("/home.jsp"); // use this to redirect to a different jsp after user submits form
     }
 }
